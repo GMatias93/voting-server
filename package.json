@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/GMatias93/voting-server/issues"
   },
-  "homepage": "https://github.com/GMatias93/voting-server#readme"
+  "homepage": "https://github.com/GMatias93/voting-server#readme",
+  "devDependencies": {
+    "babel-core": "^6.4.0"
+  }
 }
