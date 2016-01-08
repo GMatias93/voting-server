@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/GMatias93/voting-server#readme",
   "devDependencies": {
+    "babel-cli": "^6.4.0",
     "babel-core": "^6.4.0"
   }
 }
