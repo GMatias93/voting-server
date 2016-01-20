@@ -12,7 +12,7 @@
     "url": "git+https://github.com/GMatias93/voting-server.git"
   },
   "babel": {
-    "preset": [
+    "presets": [
       "es2015"
     ]
   },
