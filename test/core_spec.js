@@ -47,8 +47,7 @@ describe('Application logic', () => {
 
   });
 
-  describe('vote', () => {
-
+ 
     it('creates a tally for the voted entry', () => {
       const state = Map({
         vote: Map({
