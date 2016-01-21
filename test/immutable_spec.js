@@ -43,10 +43,13 @@ describe('Immutability', () => {
   describe('A Tree', () => {
 
     function addMovie(currentState, movie) {
-      return currentState.set(
-        'movies',
-        currentState.get('movies').push(movie)
-      );
+      // return currentState.set(
+      //   'movies',
+      //   currentState.get('movies').push(movie)
+      // );
+
+      // Does the same as above
+      return currentState.update('movies', movies => movies.push(movie));
     }
 
     it('Is immutable', () => {
