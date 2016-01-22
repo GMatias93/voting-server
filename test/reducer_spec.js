@@ -6,25 +6,25 @@ describe('reducer', () => {
 
   it('handles SET_ENTRIES', () => {
     const initialState = Map();
-    const action = { type: 'SET_ENTRIES', payload: ['Transpotting'] };
+    const action = { type: 'SET_ENTRIES', payload: ['Trainspotting'] };
     const nextState = reducer(initialState, action);
 
     expect(nextState).to.equal(fromJS({
-      entries: ['Transpotting'],
+      entries: ['Trainspotting'],
     }));
 
   });
 
   it('handles NEXT', () => {
     const initialState = fromJS({
-      entries: ['Transpotting', '28 Days Later'],
+      entries: ['Trainspotting', '28 Days Later'],
     });
     const action = { type: 'NEXT' };
     const nextState = reducer(initialState, action);
 
     expect(nextState).to.equal(fromJS({
       vote: {
-        pair: ['Transpotting', '28 Days Later'],
+        pair: ['Trainspotting', '28 Days Later'],
       },
       entries: [],
     }));
@@ -34,19 +34,29 @@ describe('reducer', () => {
   it('handles VOTE', () => {
     const initialState = fromJS({
       vote: {
-        pair: ['Transpotting', '28 Days Later'],
+        pair: ['Trainspotting', '28 Days Later'],
       },
       entries: [],
     });
-    const action = { type: 'VOTE', payload: 'Transpotting' };
+    const action = { type: 'VOTE', payload: 'Trainspotting' };
     const nextState = reducer(initialState, action);
 
     expect(nextState).to.equal(fromJS({
       vote: {
-        pair: ['Transpotting', '28 Days Later'],
-        tally: { Transpotting: 1 },
+        pair: ['Trainspotting', '28 Days Later'],
+        tally: { Trainspotting: 1 },
       },
       entries: [],
+    }));
+
+  });
+
+  it('has an initial state', () => {
+    const action = { type: 'SET_ENTRIES', payload: ['Trainspotting'] };
+    const nextState = reducer(undefined, action);
+
+    expect(nextState).to.equal(fromJS({
+      entries: ['Trainspotting'],
     }));
 
   });
