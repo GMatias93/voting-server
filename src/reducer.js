@@ -9,5 +9,5 @@ export default function reducer(state, action) {
     case 'VOTE':
       return vote(state, action.payload);
   }
-
+  return state;
 }
