@@ -11,7 +11,7 @@ describe('store', () => {
 
     store.dispatch({
       type: 'SET_ENTRIES',
-      payload: ['Trainspotting', '28 Days Later'],
+      entries: ['Trainspotting', '28 Days Later'],
     });
 
     expect(store.getState()).to.equal(fromJS({
